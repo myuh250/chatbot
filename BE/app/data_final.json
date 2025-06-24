@@ -15,19 +15,12 @@
     ],
     "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
     "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T13:31:20.640865",
+    "status": "confirmed"
   },
   {
     "id": 2,
-    "ten_khach_hang": "Nguyễn Minh Bảo",
-    "so_dien_thoai": "",
-    "danh_sach_banh": [],
-    "dia_chi": "",
-    "gio_giao": "",
-    "ghi_chu": ""
-  },
-  {
-    "id": 3,
     "ten_khach_hang": "Nguyễn Văn An",
     "so_dien_thoai": "0901234567",
     "danh_sach_banh": [
@@ -42,10 +35,12 @@
     ],
     "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
     "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T13:56:31.444158",
+    "status": "confirmed"
   },
   {
-    "id": 4,
+    "id": 3,
     "ten_khach_hang": "Nguyễn Minh Bảo",
     "so_dien_thoai": "0901234567",
     "danh_sach_banh": [
@@ -60,26 +55,12 @@
     ],
     "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
     "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T13:57:05.563166",
+    "status": "confirmed"
   },
   {
-    "id": 5,
-    "ten_khach_hang": "Lê Văn Cường",
-    "so_dien_thoai": "0987654321",
-    "danh_sach_banh": [
-      "3 bánh mousse chocolate",
-      "2 bánh red velvet",
-      "3 bánh mousse chocolate",
-      "2 bánh red velvet",
-      "2 bánh tiramisu",
-      "1 bánh cheesecake"
-    ],
-    "dia_chi": "789 Võ Văn Tần, Quận 5, TP.HCM",
-    "gio_giao": "16:00",
-    "ghi_chu": "Cần giao gấp cho sinh nhật"
-  },
-  {
-    "id": 6,
+    "id": 4,
     "ten_khach_hang": "Trần Thị Bình",
     "so_dien_thoai": "0123456789",
     "danh_sach_banh": [
@@ -94,63 +75,52 @@
     ],
     "dia_chi": "456 Nguyễn Huệ, Quận 3, TP.HCM",
     "gio_giao": "16:00",
-    "ghi_chu": ""
+    "ghi_chu": "",
+    "confirmed_at": "2025-06-24T14:03:17.910129",
+    "status": "confirmed"
+  },
+  {
+    "id": 5,
+    "ten_khach_hang": "Nguyễn Văn An",
+    "so_dien_thoai": "0901234567",
+    "danh_sach_banh": [
+      {
+        "ten_banh": "bánh kem sinh nhật chocolate",
+        "so_luong": 1
+      },
+      {
+        "ten_banh": "bánh cupcake vanilla",
+        "so_luong": 6
+      }
+    ],
+    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+    "gio_giao": "14:30",
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T14:14:57.959810",
+    "status": "confirmed"
+  },
+  {
+    "id": 6,
+    "ten_khach_hang": "Nguyễn Văn An",
+    "so_dien_thoai": "0901234567",
+    "danh_sach_banh": [
+      {
+        "ten_banh": "bánh kem sinh nhật chocolate",
+        "so_luong": 1
+      },
+      {
+        "ten_banh": "bánh cupcake vanilla",
+        "so_luong": 6
+      }
+    ],
+    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+    "gio_giao": "14:30",
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T16:01:02.180323",
+    "status": "confirmed"
   },
   {
     "id": 7,
-    "ten_khach_hang": "Nguyễn Văn An",
-    "so_dien_thoai": "0901234567",
-    "danh_sach_banh": [
-      "bánh kem sinh nhật chocolate",
-      "bánh cupcake vanilla",
-      "bánh cupcake vanilla",
-      "bánh cupcake vanilla",
-      "bánh cupcake vanilla",
-      "bánh cupcake vanilla",
-      "bánh cupcake vanilla"
-    ],
-    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
-    "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
-  },
-  {
-    "id": 8,
-    "ten_khach_hang": "Nguyễn Văn An",
-    "so_dien_thoai": "0901234567",
-    "danh_sach_banh": [
-      {
-        "ten_banh": "bánh kem sinh nhật chocolate",
-        "so_luong": 1
-      },
-      {
-        "ten_banh": "bánh cupcake vanilla",
-        "so_luong": 6
-      }
-    ],
-    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
-    "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
-  },
-  {
-    "id": 9,
-    "ten_khach_hang": "Nguyễn Văn An",
-    "so_dien_thoai": "0901234567",
-    "danh_sach_banh": [
-      {
-        "ten_banh": "bánh kem sinh nhật chocolate",
-        "so_luong": 1
-      },
-      {
-        "ten_banh": "bánh cupcake vanilla",
-        "so_luong": 6
-      }
-    ],
-    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
-    "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
-  },
-  {
-    "id": 10,
     "ten_khach_hang": "Nguyễn Văn An",
     "so_dien_thoai": "0335495217",
     "danh_sach_banh": [
@@ -165,6 +135,8 @@
     ],
     "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
     "gio_giao": "14:30",
-    "ghi_chu": "Giao trước 15h, sinh nhật con."
+    "ghi_chu": "Giao trước 15h, sinh nhật con.",
+    "confirmed_at": "2025-06-24T16:02:20.892882",
+    "status": "confirmed"
   }
 ]

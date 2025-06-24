@@ -61,5 +61,705 @@
     "role": "agent",
     "content": "Cảm ơn bạn đã liên hệ! Tôi đã ghi nhận thông tin của bạn. Nhân viên của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để hỗ trợ bạn tốt hơn. Bạn có thể đặt thêm câu hỏi khác không?",
     "timestamp": "2025-06-24T03:17:31.190404Z"
+  },
+  {
+    "id": 10,
+    "user_id": "user_szpdqoye5",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:12:38.623699Z"
+  },
+  {
+    "id": 11,
+    "user_id": "user_szpdqoye5",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:12:38.636737Z"
+  },
+  {
+    "id": 12,
+    "user_id": "user_szpdqoye5",
+    "role": "user",
+    "content": "cho tôi đặt 1 bánh tráng",
+    "timestamp": "2025-06-24T06:12:44.102962Z"
+  },
+  {
+    "id": 13,
+    "user_id": "user_szpdqoye5",
+    "role": "agent",
+    "content": "✅ Đơn hàng của bạn đã được ghi nhận! Thông tin: Vui lòng kiểm tra lại chi tiết đơn hàng.",
+    "timestamp": "2025-06-24T06:12:48.431027Z"
+  },
+  {
+    "id": 14,
+    "user_id": "user_5oy5td826",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:25:08.736074Z"
+  },
+  {
+    "id": 15,
+    "user_id": "user_a83ogww1l",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:26:30.394078Z"
+  },
+  {
+    "id": 16,
+    "user_id": "user_a83ogww1l",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:26:30.405616Z"
+  },
+  {
+    "id": 17,
+    "user_id": "user_a83ogww1l",
+    "role": "user",
+    "content": "cho tôi đặt 1 bánh tráng",
+    "timestamp": "2025-06-24T06:26:38.172513Z"
+  },
+  {
+    "id": 18,
+    "user_id": "user_a83ogww1l",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi ghi nhận đơn hàng. Vui lòng thử lại!",
+    "timestamp": "2025-06-24T06:26:40.428843Z"
+  },
+  {
+    "id": 19,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:29:08.353345Z"
+  },
+  {
+    "id": 20,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:29:08.362483Z"
+  },
+  {
+    "id": 21,
+    "user_id": "user_a5yv5o2z2",
+    "role": "user",
+    "content": "cho tôi đặt 1 bánh",
+    "timestamp": "2025-06-24T06:29:12.148329Z"
+  },
+  {
+    "id": 22,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm các thông tin sau:\n• tên khách hàng\n• số điện thoại\n• địa chỉ giao hàng\n• giờ giao hàng",
+    "timestamp": "2025-06-24T06:29:16.543767Z"
+  },
+  {
+    "id": 23,
+    "user_id": "user_a5yv5o2z2",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:29:46.998674Z"
+  },
+  {
+    "id": 24,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T06:29:51.428514Z"
+  },
+  {
+    "id": 25,
+    "user_id": "user_a5yv5o2z2",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:30:06.098645Z"
+  },
+  {
+    "id": 26,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra: Order not found",
+    "timestamp": "2025-06-24T06:30:07.635842Z"
+  },
+  {
+    "id": 27,
+    "user_id": "user_a5yv5o2z2",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:30:15.481320Z"
+  },
+  {
+    "id": 28,
+    "user_id": "user_a5yv5o2z2",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra: Order not found",
+    "timestamp": "2025-06-24T06:30:17.090205Z"
+  },
+  {
+    "id": 29,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:30:45.543582Z"
+  },
+  {
+    "id": 30,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:30:45.557626Z"
+  },
+  {
+    "id": 31,
+    "user_id": "user_g51bmmw9j",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:30:49.198702Z"
+  },
+  {
+    "id": 32,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T06:30:58.430082Z"
+  },
+  {
+    "id": 33,
+    "user_id": "user_g51bmmw9j",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T06:31:20.632832Z"
+  },
+  {
+    "id": 34,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T06:31:22.427588Z"
+  },
+  {
+    "id": 35,
+    "user_id": "user_g51bmmw9j",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:31:53.888924Z"
+  },
+  {
+    "id": 36,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm thông tin: **tên khách hàng**.",
+    "timestamp": "2025-06-24T06:31:58.795153Z"
+  },
+  {
+    "id": 37,
+    "user_id": "user_g51bmmw9j",
+    "role": "user",
+    "content": "Nguyễn Minh Bảo",
+    "timestamp": "2025-06-24T06:32:04.582537Z"
+  },
+  {
+    "id": 38,
+    "user_id": "user_g51bmmw9j",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm các thông tin sau:\n• số điện thoại\n• danh sách bánh cần đặt\n• địa chỉ giao hàng\n• giờ giao hàng",
+    "timestamp": "2025-06-24T06:32:08.192939Z"
+  },
+  {
+    "id": 39,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:55:59.114716Z"
+  },
+  {
+    "id": 40,
+    "user_id": "user_jnto5an08",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:56:20.540641Z"
+  },
+  {
+    "id": 41,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T06:56:26.254535Z"
+  },
+  {
+    "id": 42,
+    "user_id": "user_jnto5an08",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T06:56:31.439179Z"
+  },
+  {
+    "id": 43,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T06:56:32.960373Z"
+  },
+  {
+    "id": 44,
+    "user_id": "user_jnto5an08",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T06:56:43.633574Z"
+  },
+  {
+    "id": 45,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm thông tin: **tên khách hàng**.",
+    "timestamp": "2025-06-24T06:56:48.745060Z"
+  },
+  {
+    "id": 46,
+    "user_id": "user_jnto5an08",
+    "role": "user",
+    "content": "Nguyễn Minh Bảo",
+    "timestamp": "2025-06-24T06:56:55.470090Z"
+  },
+  {
+    "id": 47,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Minh Bảo\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T06:57:00.182825Z"
+  },
+  {
+    "id": 48,
+    "user_id": "user_jnto5an08",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T06:57:05.560180Z"
+  },
+  {
+    "id": 49,
+    "user_id": "user_jnto5an08",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T06:57:07.429033Z"
+  },
+  {
+    "id": 50,
+    "user_id": "user_zslbqquw8",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:58:06.404255Z"
+  },
+  {
+    "id": 51,
+    "user_id": "user_zslbqquw8",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:58:06.413635Z"
+  },
+  {
+    "id": 52,
+    "user_id": "user_x7bbezviq",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:58:10.938935Z"
+  },
+  {
+    "id": 53,
+    "user_id": "user_x7bbezviq",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:58:10.953461Z"
+  },
+  {
+    "id": 54,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:59:16.755608Z"
+  },
+  {
+    "id": 55,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T06:59:16.768237Z"
+  },
+  {
+    "id": 56,
+    "user_id": "user_vaz0tfj8s",
+    "role": "user",
+    "content": "Tên: Lê Văn Cường, điện thoại: 0987654321. Giao 18:30 tại 789 Võ Văn Tần, Quận 5, TP.HCM. Cần giao gấp cho sinh nhật.",
+    "timestamp": "2025-06-24T07:00:14.799417Z"
+  },
+  {
+    "id": 57,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm thông tin: **danh sách bánh cần đặt**.",
+    "timestamp": "2025-06-24T07:00:18.696042Z"
+  },
+  {
+    "id": 58,
+    "user_id": "user_vaz0tfj8s",
+    "role": "user",
+    "content": "Đặt bánh cho tôi: 3 bánh mousse chocolate, 2 bánh red velvet.",
+    "timestamp": "2025-06-24T07:00:51.518975Z"
+  },
+  {
+    "id": 59,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi xử lý đơn hàng: string indices must be integers",
+    "timestamp": "2025-06-24T07:00:55.946930Z"
+  },
+  {
+    "id": 60,
+    "user_id": "user_vaz0tfj8s",
+    "role": "user",
+    "content": "Đặt bánh cho tôi: 3 bánh mousse chocolate, 2 bánh red velvet.",
+    "timestamp": "2025-06-24T07:01:26.196039Z"
+  },
+  {
+    "id": 61,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi xử lý đơn hàng: string indices must be integers",
+    "timestamp": "2025-06-24T07:01:31.665758Z"
+  },
+  {
+    "id": 62,
+    "user_id": "user_vaz0tfj8s",
+    "role": "user",
+    "content": "Tôi là Trần Thị Bình, số 0123456789. Đặt 2 bánh tiramisu và 1 bánh cheesecake. Giao lúc 16:00.",
+    "timestamp": "2025-06-24T07:02:32.844211Z"
+  },
+  {
+    "id": 63,
+    "user_id": "user_vaz0tfj8s",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi xử lý đơn hàng: string indices must be integers",
+    "timestamp": "2025-06-24T07:02:37.276450Z"
+  },
+  {
+    "id": 64,
+    "user_id": "user_lqwa4xdnu",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:02:46.767099Z"
+  },
+  {
+    "id": 65,
+    "user_id": "user_lqwa4xdnu",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:02:46.792189Z"
+  },
+  {
+    "id": 66,
+    "user_id": "user_lqwa4xdnu",
+    "role": "user",
+    "content": "Tôi là Trần Thị Bình, số 0123456789. Đặt 2 bánh tiramisu và 1 bánh cheesecake. Giao lúc 16:00.",
+    "timestamp": "2025-06-24T07:02:55.273471Z"
+  },
+  {
+    "id": 67,
+    "user_id": "user_lqwa4xdnu",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm thông tin: **địa chỉ giao hàng**.",
+    "timestamp": "2025-06-24T07:02:59.783806Z"
+  },
+  {
+    "id": 68,
+    "user_id": "user_lqwa4xdnu",
+    "role": "user",
+    "content": "Địa chỉ: 456 Nguyễn Huệ, Quận 3, TP.HCM",
+    "timestamp": "2025-06-24T07:03:09.148030Z"
+  },
+  {
+    "id": 69,
+    "user_id": "user_lqwa4xdnu",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Trần Thị Bình\n• SĐT: 0123456789\n\n🎂 **Danh sách bánh:**\n• bánh tiramisu - Số lượng: 2\n• bánh cheesecake - Số lượng: 1\n\n📍 **Địa chỉ giao hàng:** 456 Nguyễn Huệ, Quận 3, TP.HCM\n⏰ **Giờ giao hàng:** 16:00\n📌 **Ghi chú:** \n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T07:03:13.534329Z"
+  },
+  {
+    "id": 70,
+    "user_id": "user_lqwa4xdnu",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T07:03:17.905123Z"
+  },
+  {
+    "id": 71,
+    "user_id": "user_lqwa4xdnu",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T07:03:19.428502Z"
+  },
+  {
+    "id": 72,
+    "user_id": "user_v1st5dcx8",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:04:50.664231Z"
+  },
+  {
+    "id": 73,
+    "user_id": "user_v1st5dcx8",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:04:50.673820Z"
+  },
+  {
+    "id": 74,
+    "user_id": "user_0rkksa5r9",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:13:00.626279Z"
+  },
+  {
+    "id": 75,
+    "user_id": "user_0rkksa5r9",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:13:00.639323Z"
+  },
+  {
+    "id": 76,
+    "user_id": "user_0rkksa5r9",
+    "role": "user",
+    "content": "chào bạn",
+    "timestamp": "2025-06-24T07:13:03.728554Z"
+  },
+  {
+    "id": 77,
+    "user_id": "user_0rkksa5r9",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi ghi nhận đơn hàng. Vui lòng thử lại!",
+    "timestamp": "2025-06-24T07:13:05.245327Z"
+  },
+  {
+    "id": 78,
+    "user_id": "user_0rkksa5r9",
+    "role": "user",
+    "content": "chào bạn",
+    "timestamp": "2025-06-24T07:13:33.286158Z"
+  },
+  {
+    "id": 79,
+    "user_id": "user_0rkksa5r9",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm các thông tin sau:\n• tên khách hàng\n• số điện thoại\n• danh sách bánh cần đặt\n• địa chỉ giao hàng\n• giờ giao hàng",
+    "timestamp": "2025-06-24T07:13:37.206172Z"
+  },
+  {
+    "id": 80,
+    "user_id": "user_0rkksa5r9",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T07:14:04.280136Z"
+  },
+  {
+    "id": 81,
+    "user_id": "user_0rkksa5r9",
+    "role": "agent",
+    "content": "❌ Có lỗi xảy ra khi xử lý đơn hàng: string indices must be integers",
+    "timestamp": "2025-06-24T07:14:07.830448Z"
+  },
+  {
+    "id": 82,
+    "user_id": "user_2xbge8vve",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:14:42.295981Z"
+  },
+  {
+    "id": 83,
+    "user_id": "user_2xbge8vve",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T07:14:42.305850Z"
+  },
+  {
+    "id": 84,
+    "user_id": "user_2xbge8vve",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T07:14:44.030893Z"
+  },
+  {
+    "id": 85,
+    "user_id": "user_2xbge8vve",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T07:14:50.385878Z"
+  },
+  {
+    "id": 86,
+    "user_id": "user_2xbge8vve",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T07:14:57.950134Z"
+  },
+  {
+    "id": 87,
+    "user_id": "user_2xbge8vve",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T07:15:00.430613Z"
+  },
+  {
+    "id": 88,
+    "user_id": "user_et8pyrj0i",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:23:07.694541Z"
+  },
+  {
+    "id": 89,
+    "user_id": "user_et8pyrj0i",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:23:07.712556Z"
+  },
+  {
+    "id": 90,
+    "user_id": "user_nzzbcdbir",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:24:16.051095Z"
+  },
+  {
+    "id": 91,
+    "user_id": "user_nzzbcdbir",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:24:16.062094Z"
+  },
+  {
+    "id": 92,
+    "user_id": "user_qd85ob2ju",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:24:21.392893Z"
+  },
+  {
+    "id": 93,
+    "user_id": "user_qd85ob2ju",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T08:24:21.404440Z"
+  },
+  {
+    "id": 94,
+    "user_id": "user_rt7zahlnw",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:00:18.580802Z"
+  },
+  {
+    "id": 95,
+    "user_id": "user_rt7zahlnw",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:00:18.598807Z"
+  },
+  {
+    "id": 96,
+    "user_id": "user_rt7zahlnw",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An, số điện thoại 0901234567. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T09:00:41.252182Z"
+  },
+  {
+    "id": 97,
+    "user_id": "user_rt7zahlnw",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0901234567\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T09:00:49.128553Z"
+  },
+  {
+    "id": 98,
+    "user_id": "user_rt7zahlnw",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T09:01:02.167588Z"
+  },
+  {
+    "id": 99,
+    "user_id": "user_rt7zahlnw",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T09:01:03.705080Z"
+  },
+  {
+    "id": 100,
+    "user_id": "user_8d87obj15",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:01:19.828326Z"
+  },
+  {
+    "id": 101,
+    "user_id": "user_8d87obj15",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:01:19.847168Z"
+  },
+  {
+    "id": 102,
+    "user_id": "user_e85j1rhkg",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:01:33.113161Z"
+  },
+  {
+    "id": 103,
+    "user_id": "user_e85j1rhkg",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T09:01:33.137048Z"
+  },
+  {
+    "id": 104,
+    "user_id": "user_e85j1rhkg",
+    "role": "user",
+    "content": "Chào bạn, tôi muốn đặt bánh. Tên tôi là Nguyễn Văn An. Tôi muốn đặt 1 bánh kem sinh nhật chocolate và 6 bánh cupcake vanilla. Giao đến 123 Đường Lê Lợi, Quận 1, TP.HCM lúc 14:30. Ghi chú: Giao trước 15h, sinh nhật con.",
+    "timestamp": "2025-06-24T09:01:52.169004Z"
+  },
+  {
+    "id": 105,
+    "user_id": "user_e85j1rhkg",
+    "role": "agent",
+    "content": "Để hoàn tất đơn hàng, bạn vui lòng cung cấp thêm thông tin: **số điện thoại**.",
+    "timestamp": "2025-06-24T09:01:56.862993Z"
+  },
+  {
+    "id": 106,
+    "user_id": "user_e85j1rhkg",
+    "role": "user",
+    "content": "0335495217",
+    "timestamp": "2025-06-24T09:02:09.273242Z"
+  },
+  {
+    "id": 107,
+    "user_id": "user_e85j1rhkg",
+    "role": "agent",
+    "content": "✅ **XÁC NHẬN ĐỚN HÀNG**\n\n📝 **Thông tin khách hàng:**\n• Tên: Nguyễn Văn An\n• SĐT: 0335495217\n\n🎂 **Danh sách bánh:**\n• bánh kem sinh nhật chocolate - Số lượng: 1\n• bánh cupcake vanilla - Số lượng: 6\n\n📍 **Địa chỉ giao hàng:** 123 Đường Lê Lợi, Quận 1, TP.HCM\n⏰ **Giờ giao hàng:** 14:30\n📌 **Ghi chú:** Giao trước 15h, sinh nhật con.\n\nBạn có xác nhận đơn hàng này không? Vui lòng trả lời \"Xác nhận\" để hoàn tất đặt hàng.\n\n👆 Vui lòng nhập \"Xác nhận\" để hoàn tất đơn hàng.",
+    "timestamp": "2025-06-24T09:02:14.706886Z"
+  },
+  {
+    "id": 108,
+    "user_id": "user_e85j1rhkg",
+    "role": "user",
+    "content": "Xác nhận",
+    "timestamp": "2025-06-24T09:02:20.880693Z"
+  },
+  {
+    "id": 109,
+    "user_id": "user_e85j1rhkg",
+    "role": "agent",
+    "content": "🎉 Đơn hàng đã được xác nhận thành công! Chúng tôi sẽ liên hệ với bạn sớm để xác nhận thời gian giao hàng.",
+    "timestamp": "2025-06-24T09:02:22.434205Z"
   }
 ]

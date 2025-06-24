@@ -49,28 +49,92 @@ export const historyService = {
   }
 };
 
-// Service cho chatbot (có thể mở rộng sau)
+// Service cho chatbot
 export const chatbotService = {
-  async analyzeAndSaveOrder(userInput) {
-      try {
-        const response = await fetch(`${API_BASE_URL}/chatbot/analyze`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ message: userInput }),
-        });
+  // Xử lý tin nhắn với logic đầy đủ (API mới)
+  async processMessage(userInput, orderId = null) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/chatbot/process`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          message: userInput,
+          order_id: orderId 
+        }),
+      });
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return await response.json(); // trả về kết quả phân tích và lưu order
-      } catch (error) {
-        console.error('Error analyzing and saving order:', error);
-        throw error;
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-    },
+
+      return await response.json();
+    } catch (error) {
+      console.error('Error processing message:', error);
+      throw error;
+    }
+  },
+
+  // Xác nhận đơn hàng
+  async confirmOrder(orderId) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/chatbot/confirm`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ order_id: orderId }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error('Error confirming order:', error);
+      throw error;
+    }
+  },
+
+  // Lấy đơn hàng đã xác nhận
+  async getConfirmedOrders() {
+    try {
+      const response = await fetch(`${API_BASE_URL}/chatbot/confirmed-orders`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error('Error getting confirmed orders:', error);
+      throw error;
+    }
+  },
+
+  // Phân tích và lưu đơn hàng (API cũ - vẫn giữ để tương thích)
+  async analyzeAndSaveOrder(userInput) {
+    try {
+      const response = await fetch(`${API_BASE_URL}/chatbot/analyze`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userInput }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error('Error analyzing and saving order:', error);
+      throw error;
+    }
+  },
 
   // Tạo bot response (tạm thời dùng logic cũ, sau này có thể call API chatbot)
   generateResponse(userInput) {

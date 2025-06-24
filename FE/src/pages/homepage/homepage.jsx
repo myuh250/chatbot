@@ -7,6 +7,7 @@ const Homepage = () => {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [currentOrderId, setCurrentOrderId] = useState(null); // Lưu order ID hiện tại
   const [userId] = useState('user_' + Math.random().toString(36).substr(2, 9)); // Tạo user ID ngẫu nhiên
   const messagesEndRef = useRef(null);
 
@@ -72,18 +73,48 @@ const Homepage = () => {
       setInputMessage('');
       setIsTyping(true);
 
-      // Gọi API phân tích và lưu order
+      // Xử lý tin nhắn với API mới
       let botResponseContent = '';
+      let newOrderId = currentOrderId;
+      
       try {
-        const analyzeResult = await chatbotService.analyzeAndSaveOrder(inputMessage);
-        if (analyzeResult && !analyzeResult.error) {
-          botResponseContent = '✅ Đơn hàng của bạn đã được ghi nhận! Thông tin: ' + (analyzeResult.summary || 'Vui lòng kiểm tra lại chi tiết đơn hàng.');
-        } else if (analyzeResult && analyzeResult.error) {
-          botResponseContent = '❌ Không thể ghi nhận đơn hàng: ' + analyzeResult.error;
+        // Kiểm tra xem có phải là xác nhận đơn hàng không
+        const isConfirmation = inputMessage.toLowerCase().includes('xác nhận') || 
+                             inputMessage.toLowerCase().includes('confirm') ||
+                             inputMessage.toLowerCase().includes('đồng ý');
+        
+        if (isConfirmation && currentOrderId) {
+          // Xác nhận đơn hàng
+          const confirmResult = await chatbotService.confirmOrder(currentOrderId);
+          if (confirmResult.success) {
+            botResponseContent = confirmResult.message;
+            setCurrentOrderId(null); // Reset order ID sau khi xác nhận
+          } else {
+            botResponseContent = '❌ Không thể xác nhận đơn hàng. Vui lòng thử lại!';
+          }
         } else {
-          botResponseContent = chatbotService.generateResponse(inputMessage);
+          // Xử lý tin nhắn thông thường
+          const processResult = await chatbotService.processMessage(inputMessage, currentOrderId);
+          
+          if (processResult.success) {
+            botResponseContent = processResult.message;
+            
+            // Cập nhật order ID nếu có
+            if (processResult.data.order_id) {
+              newOrderId = processResult.data.order_id;
+              setCurrentOrderId(newOrderId);
+            }
+            
+            // Thêm nút xác nhận nếu đơn hàng đã đủ thông tin
+            if (processResult.data.type === 'confirmation') {
+              botResponseContent += '\n\n👆 Vui lòng nhập "Xác nhận" để hoàn tất đơn hàng.';
+            }
+          } else {
+            botResponseContent = '❌ Có lỗi xảy ra khi xử lý tin nhắn. Vui lòng thử lại!';
+          }
         }
       } catch (err) {
+        console.error('API Error:', err);
         botResponseContent = '❌ Có lỗi xảy ra khi ghi nhận đơn hàng. Vui lòng thử lại!';
       }
 
