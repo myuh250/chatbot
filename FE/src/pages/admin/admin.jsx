@@ -2,82 +2,50 @@ import React, { useState, useEffect } from 'react';
 import { Users, Package, Clock, TrendingUp, Download, Search, Filter } from 'lucide-react';
 import './admin.css';
 
+const API_BASE_URL = 'http://localhost:8000';
+
 const Admin = () => {
   const [customerData, setCustomerData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
   const [sortBy, setSortBy] = useState('date');
 
-  // Sample data - thay thế bằng data thật từ API
   useEffect(() => {
-    const sampleData = [
-      {
-        id: 1,
-        customerName: 'Nguyễn Văn A',
-        phone: '0123456789',
-        orderType: 'Bánh sinh nhật',
-        quantity: 1,
-        price: 350000,
-        deliveryDate: '2024-01-15',
-        address: '123 Đường ABC, Quận 1, TP.HCM',
-        status: 'pending',
-        timestamp: '2024-01-10 14:30:00',
-        notes: 'Bánh kem vani, viết chữ "Happy Birthday"'
-      },
-      {
-        id: 2,
-        customerName: 'Trần Thị B',
-        phone: '0987654321',
-        orderType: 'Bánh kem',
-        quantity: 2,
-        price: 200000,
-        deliveryDate: '2024-01-16',
-        address: '456 Đường XYZ, Quận 3, TP.HCM',
-        status: 'confirmed',
-        timestamp: '2024-01-10 15:45:00',
-        notes: 'Bánh kem chocolate, size nhỏ'
-      },
-      {
-        id: 3,
-        customerName: 'Lê Văn C',
-        phone: '0369258147',
-        orderType: 'Bánh mì',
-        quantity: 10,
-        price: 150000,
-        deliveryDate: '2024-01-14',
-        address: '789 Đường MNO, Quận 5, TP.HCM',
-        status: 'completed',
-        timestamp: '2024-01-09 09:15:00',
-        notes: 'Bánh mì thịt nướng, giao sáng sớm'
-      },
-      {
-        id: 4,
-        customerName: 'Phạm Thị D',
-        phone: '0741852963',
-        orderType: 'Bánh cưới',
-        quantity: 1,
-        price: 2500000,
-        deliveryDate: '2024-01-20',
-        address: '321 Đường PQR, Quận 7, TP.HCM',
-        status: 'pending',
-        timestamp: '2024-01-11 11:20:00',
-        notes: 'Bánh cưới 3 tầng, theme màu hồng'
-      },
-      {
-        id: 5,
-        customerName: 'Hoàng Văn E',
-        phone: '0852741963',
-        orderType: 'Bánh ngọt',
-        quantity: 20,
-        price: 800000,
-        deliveryDate: '2024-01-17',
-        address: '654 Đường STU, Quận 10, TP.HCM',
-        status: 'confirmed',
-        timestamp: '2024-01-11 16:30:00',
-        notes: 'Mix bánh ngọt cho tiệc công ty'
+    const fetchOrders = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/chatbot/orders`);
+        const data = await res.json();
+
+        const mapped = data.map((order, idx) => {
+          const orderType = order.danh_sach_banh && order.danh_sach_banh.length > 0
+            ? order.danh_sach_banh.map(b => b.ten_banh).join(', ')
+            : '';
+          const quantity = order.danh_sach_banh && order.danh_sach_banh.length > 0
+            ? order.danh_sach_banh.reduce((sum, b) => sum + (b.so_luong || 0), 0)
+            : 0;
+
+          return {
+            id: order.id || idx + 1,
+            customerName: order.ten_khach_hang || '',
+            phone: order.so_dien_thoai || '',
+            orderType: orderType,
+            quantity: quantity,
+            price: order.tong_tien || 0, 
+            gio_giao: order.gio_giao || '', 
+            address: order.dia_chi || '',
+            status: order.status || 'pending', 
+            notes: order.ghi_chu || '',
+            danh_sach_banh: order.danh_sach_banh || []
+          };
+        });
+
+        setCustomerData(mapped);
+      } catch (err) {
+        setCustomerData([]);
       }
-    ];
-    setCustomerData(sampleData);
+    };
+
+    fetchOrders();
   }, []);
 
   const getStatusColor = (status) => {
@@ -135,7 +103,7 @@ const Admin = () => {
   };
 
   const exportToCSV = () => {
-    const headers = ['Tên khách hàng', 'Số điện thoại', 'Loại bánh', 'Số lượng', 'Giá', 'Ngày giao', 'Địa chỉ', 'Trạng thái', 'Ghi chú'];
+    const headers = ['Tên khách hàng', 'Số điện thoại', 'Loại bánh', 'Số lượng', 'Giá', 'Giờ giao', 'Địa chỉ', 'Trạng thái', 'Ghi chú'];
     const csvContent = [
       headers.join(','),
       ...sortedData.map(row => [
@@ -144,7 +112,7 @@ const Admin = () => {
         row.orderType,
         row.quantity,
         row.price,
-        row.deliveryDate,
+        row.gio_giao,
         `"${row.address}"`,
         getStatusText(row.status),
         `"${row.notes}"`
@@ -260,30 +228,66 @@ const Admin = () => {
               <th>Loại bánh</th>
               <th>Số lượng</th>
               <th>Giá tiền</th>
-              <th>Ngày giao</th>
+              <th>Giờ giao</th>
               <th>Địa chỉ</th>
               <th>Trạng thái</th>
               <th>Ghi chú</th>
             </tr>
           </thead>
           <tbody>
-            {sortedData.map((row, index) => (
-              <tr key={row.id}>
-                <td>{index + 1}</td>
-                <td className="customer-name">{row.customerName}</td>
-                <td>{row.phone}</td>
-                <td className="order-type">{row.orderType}</td>
-                <td>{row.quantity}</td>
-                <td className="price">{formatCurrency(row.price)}</td>
-                <td>{formatDate(row.deliveryDate)}</td>
-                <td className="address">{row.address}</td>
-                <td>
-                  <span className={`status ${getStatusColor(row.status)}`}>
-                    {getStatusText(row.status)}
-                  </span>
+            {sortedData.length === 0 && (
+              <tr>
+                <td colSpan={10} className="no-data">
+                  Không tìm thấy dữ liệu phù hợp
                 </td>
-                <td className="notes">{row.notes}</td>
               </tr>
+            )}
+            {sortedData.map((row, index) => (
+              row.danh_sach_banh && row.danh_sach_banh.length > 0
+                ? row.danh_sach_banh.map((b, i) => (
+                    <tr key={`${row.id}-${i}`}>
+                      {i === 0 ? (
+                        <>
+                          <td rowSpan={row.danh_sach_banh.length}>{index + 1}</td>
+                          <td rowSpan={row.danh_sach_banh.length} className="customer-name">{row.customerName}</td>
+                          <td rowSpan={row.danh_sach_banh.length}>{row.phone}</td>
+                        </>
+                      ) : null}
+                      <td className="order-type">{b.ten_banh}</td>
+                      <td>{b.so_luong}</td>
+                      {i === 0 ? (
+                        <>
+                          <td rowSpan={row.danh_sach_banh.length} className="price">{formatCurrency(row.price)}</td>
+                          <td rowSpan={row.danh_sach_banh.length}>{row.gio_giao}</td>
+                          <td rowSpan={row.danh_sach_banh.length} className="address">{row.address}</td>
+                          <td rowSpan={row.danh_sach_banh.length}>
+                            <span className={`status ${getStatusColor(row.status)}`}>
+                              {getStatusText(row.status)}
+                            </span>
+                          </td>
+                          <td rowSpan={row.danh_sach_banh.length} className="notes">{row.notes}</td>
+                        </>
+                      ) : null}
+                    </tr>
+                  ))
+                : (
+                  <tr key={row.id}>
+                    <td>{index + 1}</td>
+                    <td className="customer-name">{row.customerName}</td>
+                    <td>{row.phone}</td>
+                    <td className="order-type">{row.orderType}</td>
+                    <td>{row.quantity}</td>
+                    <td className="price">{formatCurrency(row.price)}</td>
+                    <td>{row.gio_giao}</td>
+                    <td className="address">{row.address}</td>
+                    <td>
+                      <span className={`status ${getStatusColor(row.status)}`}>
+                        {getStatusText(row.status)}
+                      </span>
+                    </td>
+                    <td className="notes">{row.notes}</td>
+                  </tr>
+                )
             ))}
           </tbody>
         </table>
