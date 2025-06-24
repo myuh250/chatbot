@@ -51,6 +51,27 @@ export const historyService = {
 
 // Service cho chatbot (có thể mở rộng sau)
 export const chatbotService = {
+  async analyzeAndSaveOrder(userInput) {
+      try {
+        const response = await fetch(`${API_BASE_URL}/chatbot/analyze`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: userInput }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        return await response.json(); // trả về kết quả phân tích và lưu order
+      } catch (error) {
+        console.error('Error analyzing and saving order:', error);
+        throw error;
+      }
+    },
+
   // Tạo bot response (tạm thời dùng logic cũ, sau này có thể call API chatbot)
   generateResponse(userInput) {
     const input = userInput.toLowerCase();

@@ -18,7 +18,6 @@ const Homepage = () => {
   const loadChatHistory = async () => {
     try {
       const history = await historyService.getHistory(userId);
-      
       // Convert API data to component format
       const formattedMessages = history.map(msg => ({
         id: msg.id,
@@ -26,9 +25,9 @@ const Homepage = () => {
         content: msg.content,
         timestamp: new Date(msg.timestamp)
       }));
-      
+
       setMessages(formattedMessages);
-      
+
       // Nếu chưa có tin nhắn nào, thêm tin nhắn chào mừng
       if (history.length === 0) {
         const welcomeMessage = 'Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?';
@@ -61,7 +60,7 @@ const Homepage = () => {
     try {
       // Lưu tin nhắn user vào API
       const userMessageData = await historyService.addMessage(userId, 'user', inputMessage);
-      
+
       const userMessage = {
         id: userMessageData.id,
         type: 'user',
@@ -73,22 +72,34 @@ const Homepage = () => {
       setInputMessage('');
       setIsTyping(true);
 
-      // Generate bot response
-      const botResponseContent = chatbotService.generateResponse(inputMessage);
-      
+      // Gọi API phân tích và lưu order
+      let botResponseContent = '';
+      try {
+        const analyzeResult = await chatbotService.analyzeAndSaveOrder(inputMessage);
+        if (analyzeResult && !analyzeResult.error) {
+          botResponseContent = '✅ Đơn hàng của bạn đã được ghi nhận! Thông tin: ' + (analyzeResult.summary || 'Vui lòng kiểm tra lại chi tiết đơn hàng.');
+        } else if (analyzeResult && analyzeResult.error) {
+          botResponseContent = '❌ Không thể ghi nhận đơn hàng: ' + analyzeResult.error;
+        } else {
+          botResponseContent = chatbotService.generateResponse(inputMessage);
+        }
+      } catch (err) {
+        botResponseContent = '❌ Có lỗi xảy ra khi ghi nhận đơn hàng. Vui lòng thử lại!';
+      }
+
       // Simulate typing delay
       setTimeout(async () => {
         try {
           // Lưu response của bot vào API  
           const botMessageData = await historyService.addMessage(userId, 'agent', botResponseContent);
-          
+
           const botMessage = {
             id: botMessageData.id,
             type: 'bot',
             content: botMessageData.content,
             timestamp: new Date(botMessageData.timestamp)
           };
-          
+
           setMessages(prev => [...prev, botMessage]);
           setIsTyping(false);
         } catch (error) {
@@ -104,7 +115,7 @@ const Homepage = () => {
           setIsTyping(false);
         }
       }, 1500);
-      
+
     } catch (error) {
       console.error('Error sending message:', error);
       setIsTyping(false);
@@ -167,7 +178,7 @@ const Homepage = () => {
             </div>
           </div>
         ))}
-        
+
         {isTyping && (
           <div className="message bot">
             <div className="message-avatar">

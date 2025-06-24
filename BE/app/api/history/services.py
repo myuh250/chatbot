@@ -32,7 +32,7 @@ async def add_message(user_id: str, role: str, content: str) -> Dict[str, Any]:
     """
     history = await _load_history()
     msg = {
-        "id_chat": len(history) + 1,
+        "id": len(history) + 1,
         "user_id": user_id,
         "role": role,
         "content": content,
