@@ -4,8 +4,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.history.routes import router as history_router
-# nếu có chatbot routes thì import thêm
-# from app.api.chatbot.routes import router as chatbot_router
+from app.api.chatbot.routes import router as chatbot_router
 
 app = FastAPI(title="AI Agent Chatbot")
 
@@ -19,7 +18,7 @@ app.add_middleware(
 )
 
 app.include_router(history_router)
-# app.include_router(chatbot_router)
+app.include_router(chatbot_router)
 
 if __name__ == "__main__":
     import uvicorn
