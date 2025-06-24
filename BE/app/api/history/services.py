@@ -2,7 +2,7 @@ import json
 import os
 import asyncio
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 # file path để lưu cache
 DATA_FILE = os.path.join(os.path.dirname(__file__), '..', '..', 'chat_history.json')
@@ -32,7 +32,7 @@ async def add_message(user_id: str, role: str, content: str) -> Dict[str, Any]:
     """
     history = await _load_history()
     msg = {
-        "id": len(history) + 1,
+        "id_chat": len(history) + 1,
         "user_id": user_id,
         "role": role,
         "content": content,
@@ -42,7 +42,7 @@ async def add_message(user_id: str, role: str, content: str) -> Dict[str, Any]:
     await _save_history(history)
     return msg
 
-async def get_history(user_id: str = None) -> List[Dict[str, Any]]:
+async def get_history(user_id: Optional[str] = None) -> List[Dict[str, Any]]:
     """
     Lấy toàn bộ lịch sử.
     Nếu có user_id thì filter theo user.
