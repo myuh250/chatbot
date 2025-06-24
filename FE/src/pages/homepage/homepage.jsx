@@ -1,19 +1,51 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Cake, Clock, MapPin } from 'lucide-react';
+import { historyService, chatbotService } from '../../services/chatbot';
 import './homepage.css';
 
 const Homepage = () => {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      type: 'bot',
-      content: 'Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?',
-      timestamp: new Date()
-    }
-  ]);
+  const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [userId] = useState('user_' + Math.random().toString(36).substr(2, 9)); // Tạo user ID ngẫu nhiên
   const messagesEndRef = useRef(null);
+
+  // Load lịch sử chat khi component mount
+  useEffect(() => {
+    loadChatHistory();
+  }, []);
+
+  const loadChatHistory = async () => {
+    try {
+      const history = await historyService.getHistory(userId);
+      
+      // Convert API data to component format
+      const formattedMessages = history.map(msg => ({
+        id: msg.id,
+        type: msg.role === 'user' ? 'user' : 'bot',
+        content: msg.content,
+        timestamp: new Date(msg.timestamp)
+      }));
+      
+      setMessages(formattedMessages);
+      
+      // Nếu chưa có tin nhắn nào, thêm tin nhắn chào mừng
+      if (history.length === 0) {
+        const welcomeMessage = 'Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?';
+        await historyService.addMessage(userId, 'agent', welcomeMessage);
+        loadChatHistory(); // Reload để lấy tin nhắn vừa thêm
+      }
+    } catch (error) {
+      console.error('Error loading chat history:', error);
+      // Fallback: hiển thị tin nhắn chào mừng offline
+      setMessages([{
+        id: 1,
+        type: 'bot',
+        content: 'Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?',
+        timestamp: new Date()
+      }]);
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -26,53 +58,57 @@ const Homepage = () => {
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
 
-    const userMessage = {
-      id: messages.length + 1,
-      type: 'user',
-      content: inputMessage,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-    setIsTyping(true);
-
-    // Simulate bot response (replace with actual API call)
-    setTimeout(() => {
-      const botResponse = generateBotResponse(inputMessage);
-      const botMessage = {
-        id: messages.length + 2,
-        type: 'bot',
-        content: botResponse,
-        timestamp: new Date()
+    try {
+      // Lưu tin nhắn user vào API
+      const userMessageData = await historyService.addMessage(userId, 'user', inputMessage);
+      
+      const userMessage = {
+        id: userMessageData.id,
+        type: 'user',
+        content: userMessageData.content,
+        timestamp: new Date(userMessageData.timestamp)
       };
-      setMessages(prev => [...prev, botMessage]);
+
+      setMessages(prev => [...prev, userMessage]);
+      setInputMessage('');
+      setIsTyping(true);
+
+      // Generate bot response
+      const botResponseContent = chatbotService.generateResponse(inputMessage);
+      
+      // Simulate typing delay
+      setTimeout(async () => {
+        try {
+          // Lưu response của bot vào API  
+          const botMessageData = await historyService.addMessage(userId, 'agent', botResponseContent);
+          
+          const botMessage = {
+            id: botMessageData.id,
+            type: 'bot',
+            content: botMessageData.content,
+            timestamp: new Date(botMessageData.timestamp)
+          };
+          
+          setMessages(prev => [...prev, botMessage]);
+          setIsTyping(false);
+        } catch (error) {
+          console.error('Error saving bot message:', error);
+          // Fallback: hiển thị response nhưng không lưu vào API
+          const botMessage = {
+            id: Date.now(),
+            type: 'bot',
+            content: botResponseContent,
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, botMessage]);
+          setIsTyping(false);
+        }
+      }, 1500);
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
       setIsTyping(false);
-    }, 1500);
-  };
-
-  const generateBotResponse = (userInput) => {
-    const input = userInput.toLowerCase();
-    
-    if (input.includes('đặt bánh') || input.includes('order') || input.includes('mua')) {
-      return 'Tuyệt vời! Để đặt bánh, bạn vui lòng cho tôi biết:\n• Loại bánh bạn muốn\n• Số lượng\n• Thời gian nhận hàng\n• Địa chỉ giao hàng (nếu cần)\n\nChúng tôi có bánh sinh nhật, bánh cưới, bánh kem, bánh mì và nhiều loại khác!';
-    }
-    
-    if (input.includes('giá') || input.includes('price') || input.includes('bao nhiêu')) {
-      return 'Bảng giá các sản phẩm của chúng tôi:\n• Bánh sinh nhật: 250,000 - 1,500,000 VNĐ\n• Bánh kem nhỏ: 150,000 - 300,000 VNĐ\n• Bánh mì: 15,000 - 25,000 VNĐ\n• Bánh ngọt: 20,000 - 80,000 VNĐ\n\nGiá có thể thay đổi tùy theo kích thước và thiết kế!';
-    }
-    
-    if (input.includes('địa chỉ') || input.includes('address') || input.includes('ở đâu')) {
-      return 'Tiệm bánh của chúng tôi tọa lạc tại:\n📍 123 Đường ABC, Quận 1, TP.HCM\n📞 Hotline: 0123-456-789\n🕒 Giờ mở cửa: 7:00 - 22:00 hàng ngày\n\nChúng tôi cũng có dịch vụ giao hàng tận nơi!';
-    }
-    
-    return 'Cảm ơn bạn đã liên hệ! Tôi đã ghi nhận thông tin của bạn. Nhân viên của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để hỗ trợ bạn tốt hơn. Bạn có thể đặt thêm câu hỏi khác không?';
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
+      // Có thể thêm thông báo lỗi cho user ở đây
     }
   };
 
@@ -81,6 +117,13 @@ const Homepage = () => {
       hour: '2-digit', 
       minute: '2-digit' 
     });
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
   };
 
   const quickActions = [

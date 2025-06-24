@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "user_id": "user123",
+    "role": "user",
+    "content": "Hello, this is a test message",
+    "timestamp": "2025-06-24T03:09:27.347248Z"
+  },
+  {
+    "id": 2,
+    "user_id": "user_us6v6hoyy",
+    "role": "user",
+    "content": "chào người đẹpsđ",
+    "timestamp": "2025-06-24T03:14:39.179714Z"
+  },
+  {
+    "id": 3,
+    "user_id": "user_us6v6hoyy",
+    "role": "agent",
+    "content": "Cảm ơn bạn đã liên hệ! Tôi đã ghi nhận thông tin của bạn. Nhân viên của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để hỗ trợ bạn tốt hơn. Bạn có thể đặt thêm câu hỏi khác không?",
+    "timestamp": "2025-06-24T03:14:40.701362Z"
+  },
+  {
+    "id": 4,
+    "user_id": "user_us6v6hoyy",
+    "role": "user",
+    "content": "hiii",
+    "timestamp": "2025-06-24T03:15:08.928369Z"
+  },
+  {
+    "id": 5,
+    "user_id": "user_us6v6hoyy",
+    "role": "agent",
+    "content": "Cảm ơn bạn đã liên hệ! Tôi đã ghi nhận thông tin của bạn. Nhân viên của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để hỗ trợ bạn tốt hơn. Bạn có thể đặt thêm câu hỏi khác không?",
+    "timestamp": "2025-06-24T03:15:10.436053Z"
+  },
+  {
+    "id": 6,
+    "user_id": "user_2pf5ny4zu",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T03:17:27.198669Z"
+  },
+  {
+    "id": 7,
+    "user_id": "user_2pf5ny4zu",
+    "role": "agent",
+    "content": "Xin chào! Tôi là trợ lý ảo của tiệm bánh. Tôi có thể giúp bạn đặt bánh, tư vấn sản phẩm, và trả lời các câu hỏi về dịch vụ của chúng tôi. Bạn cần hỗ trợ gì hôm nay?",
+    "timestamp": "2025-06-24T03:17:27.213536Z"
+  },
+  {
+    "id": 8,
+    "user_id": "user_2pf5ny4zu",
+    "role": "user",
+    "content": "oh",
+    "timestamp": "2025-06-24T03:17:29.672526Z"
+  },
+  {
+    "id": 9,
+    "user_id": "user_2pf5ny4zu",
+    "role": "agent",
+    "content": "Cảm ơn bạn đã liên hệ! Tôi đã ghi nhận thông tin của bạn. Nhân viên của chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để hỗ trợ bạn tốt hơn. Bạn có thể đặt thêm câu hỏi khác không?",
+    "timestamp": "2025-06-24T03:17:31.190404Z"
+  }
+]
