@@ -154,6 +154,21 @@ async def get_all_orders():
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to get orders: {str(e)}")
+    
+@router.get("/orders-final", response_model=List[Dict[str, Any]])
+async def get_all_orders():
+    """
+    Lấy tất cả thông tin đơn hàng đã được phân tích
+    """
+    if not chatbot_service:
+        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check OPENAI_API_KEY.")
+    
+    try:
+        orders = chatbot_service.get_orders()
+        return orders
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get orders: {str(e)}")
 
 @router.delete("/orders")
 async def clear_orders():

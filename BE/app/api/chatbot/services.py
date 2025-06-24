@@ -174,6 +174,23 @@ Chỉ trả về JSON hợp lệ, không có text khác."""
         except Exception as e:
             print(f"Error reading orders: {str(e)}")
             return []
+        
+    def get_orders(self) -> list:
+        """
+        Lấy tất cả thông tin đơn hàng từ file final
+        """
+        try:
+            file_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data_final.json')
+            
+            if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+                return []
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+                
+        except Exception as e:
+            print(f"Error reading orders: {str(e)}")
+            return []
     
     def check_order_completeness(self, order_data: Dict[str, Any]) -> Dict[str, Any]:
         """
