@@ -26,7 +26,7 @@ async def analyze_message(request: MessageRequest):
     Phân tích tin nhắn chat và trích xuất thông tin đơn hàng
     """
     if not chatbot_service:
-        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check GEMINI_API_KEY.")
+        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check OPENAI_API_KEY.")
     
     try:
         # Analyze the message
@@ -50,7 +50,7 @@ async def get_all_orders():
     Lấy tất cả thông tin đơn hàng đã được phân tích
     """
     if not chatbot_service:
-        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check GEMINI_API_KEY.")
+        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check OPENAI_API_KEY.")
     
     try:
         orders = chatbot_service.get_all_orders()
@@ -65,7 +65,7 @@ async def clear_orders():
     Xóa tất cả thông tin đơn hàng (reset)
     """
     if not chatbot_service:
-        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check GEMINI_API_KEY.")
+        raise HTTPException(status_code=500, detail="Chatbot service not initialized. Please check OPENAI_API_KEY.")
     
     try:
         import os

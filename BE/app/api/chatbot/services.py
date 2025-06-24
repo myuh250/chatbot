@@ -1,7 +1,7 @@
 import json
 import os
 from typing import Dict, Any, Optional, List
-import google.generativeai as genai
+import openai
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -10,57 +10,66 @@ load_dotenv()
 
 class ChatbotService:
     def __init__(self):
-        # Configure Gemini API
-        api_key = os.getenv("GEMINI_API_KEY")
+        # Configure OpenAI API
+        api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
+            raise ValueError("OPENAI_API_KEY not found in environment variables")
         
-        genai.configure(api_key=api_key)
-        
-        # Use gemini-1.5-flash as it works well
-        try:
-            self.model = genai.GenerativeModel('gemini-1.5-flash')
-        except Exception as e:
-            raise ValueError(f"Failed to initialize Gemini model: {str(e)}")
+        self.client = openai.OpenAI(api_key=api_key)
         
     def analyze_message(self, message: str) -> Dict[str, Any]:
         """
         Phân tích tin nhắn chat và trích xuất thông tin đơn hàng
         """
-        prompt = f"""
-        Bạn là một AI agent chuyên phân tích tin nhắn chat để trích xuất thông tin đơn hàng bánh.
-        
-        Từ tin nhắn sau, hãy phân tích và trả về thông tin dưới dạng JSON với cấu trúc:
-        {{
-            "id": null,
-            "ten_khach_hang": "Tên khách hàng",
-            "so_dien_thoai": "Số điện thoại",
-            "danh_sach_banh": [
-                {{
-                    "ten_banh": "Tên bánh",
-                    "so_luong": số_lượng
-                }}
-            ],
-            "dia_chi": "Địa chỉ giao hàng",
-            "gio_giao": "Giờ giao hàng",
-            "ghi_chu": "Ghi chú (nếu có)"
-        }}
-        
-        Lưu ý:
-        - Nếu có nhiều loại bánh, tạo nhiều object trong danh_sach_banh
-        - so_luong phải là số nguyên
-        - Nếu thông tin nào không có, để null hoặc chuỗi rỗng
-        - id để null (sẽ được tự động tạo)
-        
-        Tin nhắn: "{message}"
-        
-        Chỉ trả về JSON, không có text khác.
-        """
-        
+        system_prompt = """Bạn là một AI agent chuyên phân tích tin nhắn chat để trích xuất thông tin đơn hàng bánh.
+
+Nhiệm vụ của bạn là phân tích tin nhắn và trả về thông tin dưới dạng JSON với cấu trúc chính xác như sau:
+
+{
+    "id": null,
+    "ten_khach_hang": "Tên khách hàng",
+    "so_dien_thoai": "Số điện thoại",
+    "danh_sach_banh": [
+        {
+            "ten_banh": "Tên bánh",
+            "so_luong": số_lượng
+        }
+    ],
+    "dia_chi": "Địa chỉ giao hàng",
+    "gio_giao": "Giờ giao hàng (định dạng HH:MM)",
+    "ghi_chu": "Ghi chú (nếu có)"
+}
+
+Quy tắc quan trọng:
+1. Nếu có nhiều loại bánh, tạo nhiều object trong danh_sach_banh
+2. so_luong phải là số nguyên dương
+3. Nếu thông tin nào không có trong tin nhắn, để null hoặc chuỗi rỗng ""
+4. id luôn để null (sẽ được tự động tạo)
+5. ten_khach_hang: trích xuất tên người đặt hàng
+6. so_dien_thoai: trích xuất số điện thoại (có thể có dấu cách, dấu gạch ngang)
+7. danh_sach_banh: trích xuất tên bánh và số lượng
+8. dia_chi: trích xuất địa chỉ giao hàng
+9. gio_giao: trích xuất giờ giao hàng (định dạng HH:MM)
+10. ghi_chu: trích xuất ghi chú đặc biệt
+
+Chỉ trả về JSON hợp lệ, không có text khác."""
+
+        user_prompt = f"Phân tích tin nhắn sau: {message}"
+
         try:
-            response = self.model.generate_content(prompt)
+            response = self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0.1,
+                max_tokens=1000
+            )
+            
             # Parse JSON response
-            result = json.loads(response.text.strip())
+            result_text = response.choices[0].message.content.strip()
+            result = json.loads(result_text)
             
             # Add timestamp
             result['timestamp'] = datetime.now().isoformat()

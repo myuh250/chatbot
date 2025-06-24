@@ -10,5 +10,59 @@
   {
     "error": "Failed to analyze message: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
     "id": 3
+  },
+  {
+    "id": 4,
+    "ten_khach_hang": "Nguyễn Văn An",
+    "so_dien_thoai": "0901234567",
+    "danh_sach_banh": [
+      {
+        "ten_banh": "bánh kem sinh nhật chocolate",
+        "so_luong": 1
+      },
+      {
+        "ten_banh": "bánh cupcake vanilla",
+        "so_luong": 6
+      }
+    ],
+    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+    "gio_giao": "14:30",
+    "ghi_chu": "Giao trước 15h, sinh nhật con."
+  },
+  {
+    "id": 5,
+    "ten_khach_hang": "Trần Thị Bình",
+    "so_dien_thoai": "0123456789",
+    "danh_sach_banh": [
+      {
+        "ten_banh": "bánh tiramisu",
+        "so_luong": 2
+      },
+      {
+        "ten_banh": "bánh cheesecake",
+        "so_luong": 1
+      }
+    ],
+    "dia_chi": "456 Nguyễn Huệ, Quận 3, TP.HCM",
+    "gio_giao": "16:00",
+    "ghi_chu": ""
+  },
+  {
+    "id": 6,
+    "ten_khach_hang": "Lê Văn Cường",
+    "so_dien_thoai": "0987654321",
+    "danh_sach_banh": [
+      {
+        "ten_banh": "bánh mousse chocolate",
+        "so_luong": 3
+      },
+      {
+        "ten_banh": "bánh red velvet",
+        "so_luong": 2
+      }
+    ],
+    "dia_chi": "789 Võ Văn Tần, Quận 5, TP.HCM",
+    "gio_giao": "18:30",
+    "ghi_chu": "Cần giao gấp cho sinh nhật"
   }
 ]
